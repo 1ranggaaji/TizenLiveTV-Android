@@ -1,9 +1,9 @@
 package com.tizen.livetv.tif
 
 import android.content.Context
+import android.media.tv.TvInputManager
 import android.media.tv.TvInputService
 import android.net.Uri
-import android.util.Log
 import android.view.Surface
 import androidx.annotation.OptIn
 import androidx.media3.common.MediaItem
@@ -54,8 +54,12 @@ class RichTvInputService : TvInputService() {
             player?.volume = volume
         }
 
+        override fun onSetCaptionEnabled(enabled: Boolean) {
+            // Caption toggle handling
+        }
+
         override fun onTune(channelUri: Uri): Boolean {
-            notifyVideoUnavailable(TvInputService.VIDEO_UNAVAILABLE_REASON_BUFFERING)
+            notifyVideoUnavailable(TvInputManager.VIDEO_UNAVAILABLE_REASON_BUFFERING)
 
             // Find matching channel from URI or fallback to last watched channel
             val channel = repository.getAllChannels().firstOrNull() ?: return false
