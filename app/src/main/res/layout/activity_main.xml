@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tizen_bg_black"
+    android:keepScreenOn="true">
+
+    <!-- 1. Fullscreen Live Media Player -->
+    <androidx.media3.ui.PlayerView
+        android:id="@+id/player_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:focusable="false"
+        app:resize_mode="fit"
+        app:use_controller="false" />
+
+    <!-- 2. Buffering Indicator (Samsung Minimalist Style) -->
+    <LinearLayout
+        android:id="@+id/layout_buffering"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/bg_tizen_card_focused"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="14dp"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <ProgressBar
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/tizen_neon_cyan" />
+
+        <TextView
+            android:id="@+id/tv_buffering_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/buffering_text"
+            android:textColor="@color/tizen_text_primary"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <!-- 3. Channel Switch Toast / Quick Feedback -->
+    <TextView
+        android:id="@+id/tv_quick_feedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/bg_tizen_pill_focused"
+        android:fontFamily="sans-serif-medium"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="8dp"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <!-- 4. Samsung Info Banner (Now & Next Banner at Bottom) -->
+    <include
+        android:id="@+id/view_info_banner"
+        layout="@layout/view_info_banner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom" />
+
+    <!-- 5. Samsung Smart Hub Horizontal Bar (Overlay at Bottom) -->
+    <include
+        android:id="@+id/view_smart_hub"
+        layout="@layout/view_smart_hub_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom" />
+
+    <!-- 6. Fullscreen Samsung EPG Grid Guide -->
+    <include
+        android:id="@+id/view_epg"
+        layout="@layout/view_epg_guide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- 7. Direct Numeric Remote OSD (Top-Right) -->
+    <include
+        android:id="@+id/view_numeric_osd"
+        layout="@layout/view_numeric_osd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|end" />
+
+</FrameLayout>

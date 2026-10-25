@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_root"
+    android:layout_width="230dp"
+    android:layout_height="136dp"
+    android:layout_marginEnd="16dp"
+    android:background="@drawable/selector_tizen_card"
+    android:clickable="true"
+    android:focusable="true"
+    android:padding="14dp">
+
+    <!-- Channel Number Badge -->
+    <TextView
+        android:id="@+id/tv_card_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_tizen_pill_default"
+        android:fontFamily="sans-serif-black"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="2dp"
+        android:text="001"
+        android:textColor="@color/tizen_neon_cyan"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Live Indicator Dot -->
+    <TextView
+        android:id="@+id/tv_card_live"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_live_badge"
+        android:paddingHorizontal="6dp"
+        android:paddingVertical="1dp"
+        android:text="LIVE"
+        android:textColor="#FFFFFF"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Channel Logo & Name Layout -->
+    <LinearLayout
+        android:id="@+id/layout_channel_identity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_card_number">
+
+        <ImageView
+            android:id="@+id/iv_card_logo"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/bg_tizen_pill_default" />
+
+        <TextView
+            android:id="@+id/tv_card_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-medium"
+            android:maxLines="1"
+            android:text="Samsung TV Plus"
+            android:textColor="@color/tizen_text_primary"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <!-- Current Program Title -->
+    <TextView
+        android:id="@+id/tv_card_program"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif"
+        android:maxLines="1"
+        android:text="World Tour Live: London"
+        android:textColor="@color/tizen_text_secondary"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layout_channel_identity" />
+
+    <!-- Mini Progress Bar -->
+    <ProgressBar
+        android:id="@+id/pb_card_progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="6dp"
+        android:max="100"
+        android:progress="60"
+        android:progressDrawable="@drawable/progress_tizen"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

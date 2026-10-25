@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="520dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_tizen_card_focused"
+    android:orientation="vertical"
+    android:padding="28dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:letterSpacing="0.08"
+        android:text="@string/settings_title"
+        android:textColor="@color/tizen_neon_cyan"
+        android:textSize="20sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginBottom="16dp"
+        android:background="#20FFFFFF" />
+
+    <!-- 1. Rasio Layar -->
+    <Button
+        android:id="@+id/btn_setting_ratio"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:background="@drawable/selector_tizen_pill"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="18dp"
+        android:text="Ubah Rasio Layar (16:9 Fit / Full / Zoom)"
+        android:textColor="@color/tizen_text_primary"
+        android:textSize="15sp" />
+
+    <!-- 2. Auto Launch on Boot Toggle -->
+    <Button
+        android:id="@+id/btn_setting_boot"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/selector_tizen_pill"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="18dp"
+        android:text="Buka Otomatis Saat TV Menyala: AKTIF"
+        android:textColor="@color/tizen_text_primary"
+        android:textSize="15sp" />
+
+    <!-- 3. Set as Default TV Launcher -->
+    <Button
+        android:id="@+id/btn_setting_launcher"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/selector_tizen_pill"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="18dp"
+        android:text="Jadikan Aplikasi TV Default (Launcher)"
+        android:textColor="@color/tizen_text_primary"
+        android:textSize="15sp" />
+
+    <!-- 4. Reset Channels -->
+    <Button
+        android:id="@+id/btn_setting_reset"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/selector_tizen_pill"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:paddingHorizontal="18dp"
+        android:text="@string/setting_reset_channels"
+        android:textColor="#F87171"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/btn_setting_close"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_tizen_pill_focused"
+        android:focusable="true"
+        android:fontFamily="sans-serif-bold"
+        android:text="@string/btn_close"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp" />
+
+</LinearLayout>

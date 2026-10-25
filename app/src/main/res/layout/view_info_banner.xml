@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/banner_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="32dp"
+    android:layout_marginBottom="28dp"
+    android:background="@drawable/bg_tizen_card_focused"
+    android:padding="20dp"
+    android:visibility="gone"
+    tools:visibility="visible">
+
+    <!-- Channel Number (Samsung Large Typography) -->
+    <TextView
+        android:id="@+id/tv_channel_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="001"
+        android:textColor="@color/tizen_neon_cyan"
+        android:textSize="38sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Channel Logo -->
+    <ImageView
+        android:id="@+id/iv_channel_logo"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="16dp"
+        android:scaleType="centerCrop"
+        android:background="@drawable/bg_tizen_pill_default"
+        app:layout_constraintBottom_toBottomOf="@id/tv_channel_number"
+        app:layout_constraintStart_toEndOf="@id/tv_channel_number"
+        app:layout_constraintTop_toTopOf="@id/tv_channel_number" />
+
+    <!-- Channel Name -->
+    <TextView
+        android:id="@+id/tv_channel_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif-medium"
+        android:maxLines="1"
+        android:text="Samsung TV Plus HD"
+        android:textColor="@color/tizen_text_primary"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toStartOf="@id/layout_badges"
+        app:layout_constraintStart_toEndOf="@id/iv_channel_logo"
+        app:layout_constraintTop_toTopOf="@id/tv_channel_number" />
+
+    <!-- Badges (4K UHD, HDR10, Dolby, Live) -->
+    <LinearLayout
+        android:id="@+id/layout_badges"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_channel_number">
+
+        <TextView
+            android:id="@+id/badge_live"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_live_badge"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="3dp"
+            android:text="● LIVE"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/badge_resolution"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_quality_badge"
+            android:text="4K UHD"
+            android:textColor="@color/tizen_text_primary"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/badge_hdr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:background="@drawable/bg_quality_badge"
+            android:text="HDR10+"
+            android:textColor="@color/tizen_text_secondary"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/badge_audio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:background="@drawable/bg_quality_badge"
+            android:text="Dolby 5.1"
+            android:textColor="@color/tizen_text_secondary"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- Program Divider Line -->
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="14dp"
+        android:background="#20FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_channel_number" />
+
+    <!-- Current Program Title -->
+    <TextView
+        android:id="@+id/tv_current_program"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif-medium"
+        android:maxLines="1"
+        android:text="Premier League Live: Manchester United vs Chelsea"
+        android:textColor="@color/tizen_text_primary"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@id/tv_program_time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/divider" />
+
+    <!-- Program Time Range -->
+    <TextView
+        android:id="@+id/tv_program_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif"
+        android:text="20:00 - 22:00"
+        android:textColor="@color/tizen_text_secondary"
+        android:textSize="15sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/tv_current_program"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Live Progress Bar -->
+    <ProgressBar
+        android:id="@+id/progress_program"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:layout_marginTop="8dp"
+        android:max="100"
+        android:progress="45"
+        android:progressDrawable="@drawable/progress_tizen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_current_program" />
+
+    <!-- Next Program Preview (Samsung Tizen style "Next" indicator) -->
+    <TextView
+        android:id="@+id/tv_next_program"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif"
+        android:maxLines="1"
+        android:text="Selanjutnya: 22:00 - Matchday Highlights &amp; Post-Game Analysis"
+        android:textColor="@color/tizen_text_muted"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/progress_program" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

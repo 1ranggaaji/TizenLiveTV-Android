@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/smart_hub_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_tizen_glass_panel"
+    android:clipToPadding="false"
+    android:paddingHorizontal="28dp"
+    android:paddingTop="20dp"
+    android:paddingBottom="24dp"
+    android:visibility="gone"
+    tools:visibility="visible">
+
+    <!-- Smart Hub Header: Category Title & Clock -->
+    <TextView
+        android:id="@+id/tv_hub_category_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="SAMSUNG SMART HUB • SALURAN TV"
+        android:textColor="@color/tizen_neon_cyan"
+        android:textSize="14sp"
+        android:letterSpacing="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_hub_clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-medium"
+        android:text="20:30 WIB"
+        android:textColor="@color/tizen_text_secondary"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Upper Section: Horizontal Channel Cards Carousel -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_hub_channels"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:clipToPadding="false"
+        android:orientation="horizontal"
+        android:paddingVertical="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_hub_category_title" />
+
+    <!-- Lower Section: Smart Hub Quick Action Pills -->
+    <HorizontalScrollView
+        android:id="@+id/scroll_quick_actions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:clipToPadding="false"
+        android:scrollbars="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rv_hub_channels">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <!-- Pill: Semua Saluran -->
+            <Button
+                android:id="@+id/btn_action_all"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:background="@drawable/selector_tizen_pill"
+                android:drawableStart="@drawable/ic_tizen_tv_logo"
+                android:drawablePadding="8dp"
+                android:focusable="true"
+                android:fontFamily="sans-serif-medium"
+                android:paddingHorizontal="16dp"
+                android:text="@string/action_all_channels"
+                android:textColor="@color/tizen_text_primary"
+                android:textSize="13sp" />
+
+            <!-- Pill: Panduan TV (EPG) -->
+            <Button
+                android:id="@+id/btn_action_epg"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/selector_tizen_pill"
+                android:drawableStart="@drawable/ic_epg_guide"
+                android:drawablePadding="8dp"
+                android:focusable="true"
+                android:fontFamily="sans-serif-medium"
+                android:paddingHorizontal="16dp"
+                android:text="@string/action_epg_guide"
+                android:textColor="@color/tizen_text_primary"
+                android:textSize="13sp" />
+
+            <!-- Pill: Favorit -->
+            <Button
+                android:id="@+id/btn_action_favorites"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/selector_tizen_pill"
+                android:drawableStart="@drawable/ic_favorite_star"
+                android:drawablePadding="8dp"
+                android:focusable="true"
+                android:fontFamily="sans-serif-medium"
+                android:paddingHorizontal="16dp"
+                android:text="@string/action_favorites"
+                android:textColor="@color/tizen_text_primary"
+                android:textSize="13sp" />
+
+            <!-- Pill: Rasio Layar -->
+            <Button
+                android:id="@+id/btn_action_ratio"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/selector_tizen_pill"
+                android:drawableStart="@drawable/ic_ratio"
+                android:drawablePadding="8dp"
+                android:focusable="true"
+                android:fontFamily="sans-serif-medium"
+                android:paddingHorizontal="16dp"
+                android:text="@string/action_aspect_ratio"
+                android:textColor="@color/tizen_text_primary"
+                android:textSize="13sp" />
+
+            <!-- Pill: Tambah M3U -->
+            <Button
+                android:id="@+id/btn_action_add_m3u"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/selector_tizen_pill"
+                android:drawableStart="@drawable/ic_playlist_add"
+                android:drawablePadding="8dp"
+                android:focusable="true"
+                android:fontFamily="sans-serif-medium"
+                android:paddingHorizontal="16dp"
+                android:text="@string/action_add_m3u"
+                android:textColor="@color/tizen_text_primary"
+                android:textSize="13sp" />
+
+            <!-- Pill: Pengaturan -->
+            <Button
+                android:id="@+id/btn_action_settings"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/selector_tizen_pill"
+                android:drawableStart="@drawable/ic_settings"
+                android:drawablePadding="8dp"
+                android:focusable="true"
+                android:fontFamily="sans-serif-medium"
+                android:paddingHorizontal="16dp"
+                android:text="@string/action_settings"
+                android:textColor="@color/tizen_text_primary"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

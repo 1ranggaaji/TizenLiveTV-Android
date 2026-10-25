@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/epg_channel_root"
+    android:layout_width="match_parent"
+    android:layout_height="54dp"
+    android:layout_marginBottom="6dp"
+    android:background="@drawable/selector_tizen_card"
+    android:clickable="true"
+    android:focusable="true"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingHorizontal="12dp">
+
+    <TextView
+        android:id="@+id/tv_epg_channel_num"
+        android:layout_width="38dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="001"
+        android:textColor="@color/tizen_neon_cyan"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/iv_epg_channel_logo"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="6dp"
+        android:background="@drawable/bg_tizen_pill_default"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/tv_epg_channel_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_weight="1"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif-medium"
+        android:maxLines="1"
+        android:text="Samsung TV Plus"
+        android:textColor="@color/tizen_text_primary"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/iv_epg_fav_indicator"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:src="@drawable/ic_favorite_star"
+        android:visibility="gone" />
+
+</LinearLayout>

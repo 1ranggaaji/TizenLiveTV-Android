@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">Samsung Live TV</string>
+    <string name="app_desc">Aplikasi Live TV dengan antarmuka modern Samsung Tizen OS</string>
+
+    <!-- Quick Hub Actions -->
+    <string name="action_all_channels">Semua Saluran</string>
+    <string name="action_epg_guide">Panduan TV (EPG)</string>
+    <string name="action_favorites">Favorit</string>
+    <string name="action_genres">Kategori</string>
+    <string name="action_settings">Pengaturan</string>
+    <string name="action_add_m3u">Tambah Playlist M3U</string>
+    <string name="action_aspect_ratio">Rasio Layar</string>
+
+    <!-- Badges & Status -->
+    <string name="badge_live">LIVE</string>
+    <string name="badge_4k">4K UHD</string>
+    <string name="badge_hdr">HDR10</string>
+    <string name="badge_dolby">Dolby 5.1</string>
+    <string name="next_program_prefix">Selanjutnya: </string>
+    <string name="buffering_text">Memuat Siaran Langsung...</string>
+    <string name="channel_tuning_error">Siaran tidak dapat diputar. Mencoba menghubungkan ulang...</string>
+
+    <!-- Dialogs -->
+    <string name="dialog_exit_title">Keluar dari Live TV</string>
+    <string name="dialog_exit_message">Apakah Anda ingin keluar ke beranda TV?</string>
+    <string name="btn_yes">Ya</string>
+    <string name="btn_cancel">Batal</string>
+    <string name="btn_close">Tutup</string>
+    <string name="btn_save">Simpan</string>
+    <string name="btn_watch_now">Tonton Sekarang</string>
+
+    <!-- Settings Dialog -->
+    <string name="settings_title">Pengaturan Siaran & TV</string>
+    <string name="setting_boot_launch">Buka Otomatis Saat TV Menyala</string>
+    <string name="setting_boot_launch_desc">Langsung memutar TV saat Android TV dihidupkan</string>
+    <string name="setting_default_launcher">Jadikan Aplikasi TV Default (Launcher)</string>
+    <string name="setting_default_launcher_desc">Atur agar tombol Home pada remote selalu membuka Live TV</string>
+    <string name="setting_reset_channels">Kembalikan Daftar Saluran Bawaan</string>
+</resources>

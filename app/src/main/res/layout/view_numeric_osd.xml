@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/osd_numeric_root"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="top|end"
+    android:layout_marginTop="32dp"
+    android:layout_marginEnd="36dp"
+    android:background="@drawable/bg_tizen_card_focused"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingHorizontal="24dp"
+    android:paddingVertical="14dp"
+    android:visibility="gone">
+
+    <TextView
+        android:id="@+id/tv_osd_digits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:letterSpacing="0.2"
+        android:text="002"
+        android:textColor="@color/tizen_neon_cyan"
+        android:textSize="44sp" />
+
+    <TextView
+        android:id="@+id/tv_osd_channel_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Pindah saluran..."
+        android:textColor="@color/tizen_text_secondary"
+        android:textSize="14sp" />
+
+</LinearLayout>

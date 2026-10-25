@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Samsung Tizen OS Dark & Neon Palette -->
+    <color name="tizen_bg_black">#070A0F</color>
+    <color name="tizen_glass_surface">#E60F172A</color>
+    <color name="tizen_glass_card">#331E293B</color>
+    <color name="tizen_card_focused">#2638BDF8</color>
+    <color name="tizen_border_subtle">#26FFFFFF</color>
+    
+    <!-- Samsung Tizen Blue / Cyan Accents -->
+    <color name="tizen_neon_blue">#00A3FF</color>
+    <color name="tizen_neon_cyan">#38BDF8</color>
+    <color name="tizen_accent_glow">#6600A3FF</color>
+    <color name="tizen_blue_gradient_start">#0284C7</color>
+    <color name="tizen_blue_gradient_end">#0369A1</color>
+
+    <!-- UI State Colors -->
+    <color name="tizen_live_red">#EF4444</color>
+    <color name="tizen_favorite_gold">#FBBF24</color>
+    <color name="tizen_badge_bg">#33000000</color>
+    <color name="tizen_badge_border">#4DFFFFFF</color>
+
+    <!-- Typography -->
+    <color name="tizen_text_primary">#F8FAFC</color>
+    <color name="tizen_text_secondary">#94A3B8</color>
+    <color name="tizen_text_muted">#64748B</color>
+    <color name="tizen_text_highlight">#38BDF8</color>
+
+    <!-- Overlays -->
+    <color name="tizen_overlay_gradient_start">#F0070A0F</color>
+    <color name="tizen_overlay_gradient_mid">#990F172A</color>
+    <color name="tizen_overlay_gradient_end">#00070A0F</color>
+</resources>
