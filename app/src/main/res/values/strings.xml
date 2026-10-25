@@ -30,7 +30,7 @@
     <string name="btn_watch_now">Tonton Sekarang</string>
 
     <!-- Settings Dialog -->
-    <string name="settings_title">Pengaturan Siaran & TV</string>
+   <string name="settings_title">Pengaturan Siaran &amp; TV</string>
     <string name="setting_boot_launch">Buka Otomatis Saat TV Menyala</string>
     <string name="setting_boot_launch_desc">Langsung memutar TV saat Android TV dihidupkan</string>
     <string name="setting_default_launcher">Jadikan Aplikasi TV Default (Launcher)</string>
