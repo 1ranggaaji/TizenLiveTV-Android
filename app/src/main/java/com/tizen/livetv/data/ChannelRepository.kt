@@ -5,7 +5,7 @@ import android.content.Context
 import android.media.tv.TvContract
 import android.net.Uri
 import android.util.Log
-import androidx.tvprovider.media.tv.ChannelHeader
+
 import androidx.tvprovider.media.tv.TvContractCompat
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
